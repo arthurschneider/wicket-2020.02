@@ -1,0 +1,37 @@
+<wicket:extend>
+		<div class="col-md-6">
+			<div wicket:id="feedback">Feedback</div>
+
+			<form wicket:id="form">
+				<h2>Check out</h2>
+				<p>Please enter your billing address.</p>
+
+				<div class="form-group">
+					<label for="name">Name</label> <input wicket:id="name" name="name"
+						type="text" class="form-control" placeholder="name" />
+				</div>
+				<div class="form-group">
+					<label for="street">Street</label> <input wicket:id="street"
+						name="street" type="text" class="form-control"
+						placeholder="street" />
+				</div>
+
+				<div class="form-group">
+					<label for="zipcode">Zip code</label> <input wicket:id="zipcode"
+						name="zipcode" type="text" class="form-control"
+						placeholder="zip code" />
+				</div>
+
+				<div class="form-group">
+					<label for="city">City</label> <input wicket:id="city" name="city"
+						type="text" class="form-control" placeholder="city" />
+				</div>
+				<input wicket:id="cancel" type="button" value="Cancel" /> <input
+					wicket:id="order" type="submit" value="Order!" />
+			</form>
+
+		</div>
+		<div class="col-md-6">
+			<div wicket:id="cart"></div>
+		</div>
+</wicket:extend>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Wicket Training: Cheesr - Cheese Online</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+<body style="padding-top: 50px;">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Cheesr - Cheese Online</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="col-md-6">
+			<h2>Our Selection</h2>
+			<div wicket:id="cheeses" class="cheese">
+				<h3 wicket:id="name">Gouda</h3>
+				<p wicket:id="description">Gouda is a Dutch...</p>
+				<p>
+					<span wicket:id="price">$1.99</span> <a wicket:id="add" href="#">add to cart</a>
+				</p>
+			</div>
+<wicket:remove>
+			<div class="cheese">
+				<h3>Emmental</h3>
+				<p>Emmental is a Swiss che...</p>
+				<p>
+					<span>$2.99</span> <a href="#">add to cart</a>
+				</p>
+			</div>
+</wicket:remove>
+		</div>
+
+		<div class="col-md-6">
+			<h2>Your Choice</h2>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>Gouda</td>
+						<td>$ 2.99</td>
+						<td><a href="#">remove</a></td>
+					</tr>
+					<tr>
+						<td>Emmental</td>
+						<td>$ 1.99</td>
+						<td><a href="#">remove</a></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr class="total">
+						<th>Total</th>
+						<td>$ 4.98</td>
+						<td>&nbsp;</td>
+					</tr>
+				</tfoot>
+			</table>
+			<input type="button" value="Check out"></input>
+		</div>
+	</div>
+	<!-- /.container -->
+</body>
+</html>
